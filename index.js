@@ -14,10 +14,6 @@ function findCountry(e){
 
 //show country function will take in country data and insert into card
 function showCountry(data){
-    if(data && data.length > 0){
-        const toTurnOn = document.getElementsByClassName('is-invisible')[0];
-        toTurnOn.classList.replace('is-invisible', 'is-visible');
-    }
 
     let searchedCountry = data[0]
     if (!searchedCountry){
@@ -49,7 +45,8 @@ function showCountry(data){
     document.getElementById('country-capital').innerHTML = `Capital: ${countryCapital}`
     document.getElementById('country-languages').innerHTML = `Language(s):${countryLanguages}`
     document.getElementById('country-image').src = `${countryFlag}`
-}
 
-// let countrySearchBar = document.getElementById('country-enter');
-// countrySearchBar.addEventListener('submit', e => findCountry(e));
+    document.getElementById('country-info').classList.remove('is-hidden');
+    //clear prev info
+    document.getElementById('country-input').value = ''
+}
