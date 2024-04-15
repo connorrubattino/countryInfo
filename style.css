@@ -1,0 +1,11 @@
+body{
+    min-height: 100vh;
+}
+
+.is_invisible{
+    display:none
+}
+
+.is-visible{
+    display:block;
+}
